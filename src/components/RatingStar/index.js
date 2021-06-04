@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { RatingButton } from "./RatingStar.styled";
 import RatingStarIcon from "../RatingStarIcon";
@@ -8,21 +8,24 @@ const COLORS = {
   grey: "#505050",
 };
 
-const RatingStar = ({ index, rating }) => {
-  const fillColor = useMemo(() => {
+const RatingStar = ({ index = 0, rating = 0 }) => {
+  const fillStarsWithColor = (index) => {
     if (rating > index) {
       return COLORS.white;
     } else {
       return COLORS.grey;
     }
-  }, [index, rating]);
+  };
   return (
     <RatingButton>
-      <RatingStarIcon fill={fillColor} />
+      <RatingStarIcon fill={fillStarsWithColor(index)} />
     </RatingButton>
   );
 };
 
-RatingStar.propTypes = {};
+RatingStar.propTypes = {
+  index: PropTypes.number,
+  rating: PropTypes.number,
+};
 
 export default RatingStar;

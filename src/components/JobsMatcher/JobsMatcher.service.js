@@ -1,4 +1,5 @@
 import data from "../../json/matched_jobs.json";
+
 export const fetchFakeRecruitersData = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
