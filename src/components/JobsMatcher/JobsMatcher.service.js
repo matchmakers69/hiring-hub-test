@@ -48,13 +48,13 @@ export const recruiterCarouselSettings = {
   arrows: false,
   slidesToShow: 3,
   slidesToScroll: 1,
-  speed: 2000,
+  speed: 3000,
   cssEase: "linear",
   swipeToSlide: true,
   className: "center",
   centerMode: true,
-  autoplay: false,
-  autoplaySpeed: 2000,
+  autoplay: true,
+  autoplaySpeed: 3000,
   pauseOnHover: true,
   responsive: [
     {
